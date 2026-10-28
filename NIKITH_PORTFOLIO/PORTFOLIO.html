@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sai Nikith Nama | Aspiring Cloud Engineer</title>
+<meta name="description" content="Portfolio of Sai Nikith Nama, B.E. Computer Science student at RV College of Engineering.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1b2f;--paper:#fff6dd;--sun:#ffd23f;--pink:#ff5d8f;--blue:#3a86ff;--mint:#3ddc97;--bd:3px solid var(--ink);--sh:6px 6px 0 var(--ink)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:500 1.05rem/1.6 "Bricolage Grotesque",system-ui,sans-serif;background-image:radial-gradient(var(--ink) 1px,transparent 1.5px);background-size:26px 26px;background-attachment:fixed}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--blue);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:var(--sun);border-bottom:var(--bd)}
+nav .wrap{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center;padding-block:10px}
+nav b{margin-right:auto;font-weight:800;font-size:1.1rem}
+nav a{text-decoration:none;font-weight:800;padding:2px 8px;border:3px solid transparent;border-radius:8px}
+nav a:hover{border-color:var(--ink);background:var(--paper)}
+header{padding:56px 0 30px}
+h1{font-weight:800;font-size:clamp(2.6rem,8vw,5.6rem);line-height:.98;letter-spacing:-.03em}
+h1 span{display:inline-block;background:var(--pink);border:var(--bd);box-shadow:var(--sh);padding:0 .15em;transform:rotate(-2deg)}
+.role{margin-top:26px;font:700 clamp(1.1rem,3vw,1.6rem)/1.3 "JetBrains Mono",monospace}
+.role i{display:inline-block;width:.6ch;height:1.1em;background:var(--ink);vertical-align:-.15em;margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;font-weight:800;text-decoration:none;background:var(--blue);color:#fff;border:var(--bd);border-radius:12px;padding:10px 20px;box-shadow:var(--sh);transition:transform .12s,box-shadow .12s}
+.btn.alt{background:var(--mint);color:var(--ink)}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+section{padding:46px 0}
+h2{font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);letter-spacing:-.02em;margin-bottom:22px;display:inline-block;background:var(--sun);border:var(--bd);padding:0 .3em;box-shadow:var(--sh);transform:rotate(1deg)}
+.term{background:var(--ink);color:#e9ffe9;border:var(--bd);border-radius:14px;box-shadow:var(--sh);font:400 .95rem/1.55 "JetBrains Mono",monospace;overflow:hidden}
+.bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#2e2e4d;color:#bbb;font-size:.8rem}
+.bar s{width:13px;height:13px;border-radius:50%;background:var(--pink);text-decoration:none}
+.bar s:nth-child(2){background:var(--sun)}.bar s:nth-child(3){background:var(--mint)}
+.bar em{margin-left:8px;font-style:normal}
+#out{height:340px;overflow-y:auto;padding:14px;white-space:pre-wrap;word-break:break-word;cursor:text}
+#out .cmd{color:var(--sun)}
+#out .hl{color:var(--mint)}
+#out a{color:var(--blue);background:#e9ffe9}
+.row{display:flex;gap:8px;padding:10px 14px;border-top:2px dashed #55557a}
+.row span{color:var(--mint);white-space:nowrap}
+#in{flex:1;min-width:0;background:none;border:0;color:inherit;font:inherit;outline:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 14px}
+.chips button{font:700 .8rem "JetBrains Mono",monospace;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:3px 10px;cursor:pointer}
+.chips button:hover{background:var(--sun)}
+.card{background:#fff;border:var(--bd);border-radius:16px;box-shadow:var(--sh);padding:22px 24px}
+.skill{margin:14px 0}
+.skill div:first-child{display:flex;justify-content:space-between;font-weight:800}
+.track{height:20px;border:var(--bd);border-radius:20px;background:var(--paper);overflow:hidden;margin-top:4px}
+.fill{height:100%;width:0;background:var(--pink);border-right:var(--bd);transition:width 1.3s cubic-bezier(.2,.9,.3,1.2)}
+.skill:nth-child(3n+2) .fill{background:var(--blue)}.skill:nth-child(3n) .fill{background:var(--mint)}
+.proj{display:grid;gap:20px;grid-template-columns:1.2fr 1fr}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tags b{border:2px solid var(--ink);border-radius:20px;padding:0 12px;background:var(--sun);font-size:.9rem}
+.edu dl{display:grid;grid-template-columns:auto 1fr;gap:6px 20px}
+.edu dt{font-weight:800}.edu dd{margin:0}
+footer{border-top:var(--bd);background:var(--ink);color:var(--paper);padding:26px 0;text-align:center}
+#mx{position:fixed;inset:0;z-index:20;background:#000;display:none;cursor:pointer}
+@media(max-width:720px){.proj{grid-template-columns:1fr}#out{height:300px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>☁️ Nikith</b><a href="#terminal">Terminal</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+
+<header class="wrap">
+  <h1>Hi, I’m <span>Sai Nikith Nama</span></h1>
+  <p class="role"><span id="type"></span><i></i></p>
+  <div class="btns">
+    <a class="btn" href="#terminal">Try my terminal</a>
+    <a class="btn alt" href="https://github.com/sainikith14" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn alt" href="https://www.linkedin.com/in/sai-nikith-nama-6217863b7/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="terminal">
+  <h2>Ask my terminal</h2>
+  <div class="term">
+    <div class="bar"><s></s><s></s><s></s><em>nikith@portfolio: ~</em></div>
+    <div id="out" role="log" aria-live="polite"></div>
+    <div class="chips" id="chips"></div>
+    <label class="row"><span>nikith@portfolio:~$</span><input id="in" autocomplete="off" spellcheck="false" aria-label="Type a command"></label>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card" id="bars">
+    <div class="skill"><div><span>C programming</span><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+    <div class="skill"><div><span>HTML</span><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+    <div class="skill"><div><span>CSS</span><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+    <div class="skill"><div><span>DSA in C (learning)</span><span>35%</span></div><div class="track"><div class="fill" data-w="35"></div></div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="proj">
+    <div class="card">
+      <h3>This portfolio</h3>
+      <p>The site you’re on. It has a working terminal, animated skill bars, a typing intro and a hidden matrix mode. Built with plain HTML, CSS and JavaScript, and hosted on GitHub Pages.</p>
+      <div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>GitHub Pages</b></div>
+      <a class="btn" href="https://github.com/sainikith14" target="_blank" rel="noopener">See my GitHub</a>
+    </div>
+    <div class="card"><h3>Hint</h3><p>Open the terminal and run <b>projects</b>. Then try to find the hidden command.</p></div>
+  </div>
+</section>
+
+<section id="education" class="edu">
+  <h2>Education</h2>
+  <div class="card"><dl>
+    <dt>College</dt><dd>RV College of Engineering</dd>
+    <dt>Course</dt><dd>B.E. Computer Science Engineering</dd>
+    <dt>Graduating</dt><dd>2029</dd>
+    <dt>CGPA</dt><dd>8.5</dd>
+  </dl></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Want to work together or just say hi? Email me and I’ll reply.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:nikithnama@gmail.com">nikithnama@gmail.com</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/sai-nikith-nama-6217863b7/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="https://github.com/sainikith14" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Built by Sai Nikith Nama · 2026</footer>
+<canvas id="mx" aria-label="Matrix animation. Click or press Escape to close."></canvas>
+
+<script>
+// Typing intro
+(function(){
+  var el=document.getElementById('type'),words=['Aspiring Cloud Engineer','CSE student at RVCE','Learning DSA in C'],w=0,c=0,del=false;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=words[0];return}
+  (function tick(){
+    var s=words[w];c+=del?-1:1;el.textContent=s.slice(0,c);
+    var t=del?35:75;
+    if(!del&&c===s.length){del=true;t=1400}
+    else if(del&&c===0){del=false;w=(w+1)%words.length;t=350}
+    setTimeout(tick,t);
+  })();
+})();
+
+// Skill bars animate when visible
+(function(){
+  var fills=document.querySelectorAll('.fill');
+  function go(){fills.forEach(function(f){f.style.width=f.dataset.w+'%'})}
+  if(!('IntersectionObserver' in window)){go();return}
+  new IntersectionObserver(function(e,o){if(e[0].isIntersecting){go();o.disconnect()}},{threshold:.3}).observe(document.getElementById('bars'));
+})();
+
+// Terminal
+(function(){
+  var out=document.getElementById('out'),inp=document.getElementById('in'),chips=document.getElementById('chips');
+  var hist=[],hi=0;
+  var L={
+    li:'<a href="https://www.linkedin.com/in/sai-nikith-nama-6217863b7/" target="_blank" rel="noopener">linkedin.com/in/sai-nikith-nama-6217863b7</a>',
+    gh:'<a href="https://github.com/sainikith14" target="_blank" rel="noopener">github.com/sainikith14</a>',
+    em:'<a href="mailto:nikithnama@gmail.com">nikithnama@gmail.com</a>'
+  };
+  var C={
+    help:function(){return 'Available commands:\n  <span class="hl">about</span>      who I am\n  <span class="hl">skills</span>     what I know\n  <span class="hl">projects</span>   what I built\n  <span class="hl">education</span>  where I study\n  <span class="hl">contact</span>    how to reach me\n  <span class="hl">clear</span>      clean the screen\n  and one hidden command. Try matrix.'},
+    about:function(){return 'Name     : Sai Nikith Nama\nCollege  : RV College of Engineering\nCourse   : B.E. Computer Science Engineering (2nd year)\nCGPA     : 8.5\nGoal     : Cloud Engineer'},
+    skills:function(){return 'C programming\nHTML\nCSS\nDSA in C (learning)'},
+    projects:function(){return '1. This portfolio: HTML, CSS and JavaScript, hosted on GitHub Pages.\n   Terminal, animated skill bars, typing intro and a hidden matrix mode.\nMore projects are on its way. See '+L.gh},
+    education:function(){return 'RV College of Engineering\nB.E. Computer Science Engineering, graduating 2029\nCGPA: 8.5'},
+    contact:function(){return 'Email   : '+L.em+'\nLinkedIn: '+L.li+'\nGitHub  : '+L.gh},
+    clear:function(){out.innerHTML='';return null},
+    matrix:function(){matrix();return 'Wake up, Nikith. Click or press Esc to exit.'}
+  };
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+  function print(h){var d=document.createElement('div');d.innerHTML=h;out.appendChild(d);out.scrollTop=out.scrollHeight}
+  function run(raw){
+    var cmd=raw.trim().toLowerCase();
+    if(!cmd)return;
+    hist.push(raw);hi=hist.length;
+    print('<span class="cmd">$ '+esc(raw)+'</span>');
+    if(C[cmd]){var r=C[cmd]();if(r)print(r)}
+    else print('Command not found: '+esc(cmd)+'. Type <span class="hl">help</span> to see what works.');
+  }
+  inp.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){run(inp.value);inp.value=''}
+    else if(e.key==='ArrowUp'&&hist.length){hi=Math.max(0,hi-1);inp.value=hist[hi];e.preventDefault()}
+    else if(e.key==='ArrowDown'){hi=Math.min(hist.length,hi+1);inp.value=hist[hi]||'';e.preventDefault()}
+  });
+  out.addEventListener('click',function(){inp.focus({preventScroll:true})});
+  ['help','about','skills','projects','education','contact'].forEach(function(n){
+    var b=document.createElement('button');b.type='button';b.textContent=n;
+    b.onclick=function(){run(n);inp.focus({preventScroll:true})};chips.appendChild(b)
+  });
+  print('Welcome to Nikith’s portfolio terminal.\nType <span class="hl">help</span> or tap a command below.');
+
+  // Matrix easter egg
+  var cv=document.getElementById('mx'),timer,stopT;
+  function stop(){clearInterval(timer);clearTimeout(stopT);cv.style.display='none'}
+  function matrix(){
+    var x=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;cv.style.display='block';
+    var fs=16,cols=Math.floor(cv.width/fs),drops=[],chars='01アイウエオカキクケコ{}<>/;$#';
+    for(var i=0;i<cols;i++)drops[i]=Math.random()*-40;
+    clearInterval(timer);clearTimeout(stopT);
+    timer=setInterval(function(){
+      x.fillStyle='rgba(0,0,0,.08)';x.fillRect(0,0,cv.width,cv.height);
+      x.fillStyle='#3ddc97';x.font=fs+'px monospace';
+      for(var i=0;i<cols;i++){
+        x.fillText(chars[Math.floor(Math.random()*chars.length)],i*fs,drops[i]*fs);
+        if(drops[i]*fs>cv.height&&Math.random()>.975)drops[i]=0;
+        drops[i]++;
+      }
+    },45);
+    stopT=setTimeout(stop,10000);
+  }
+  cv.addEventListener('click',stop);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')stop()});
+})();
+</script>
+</body>
+</html>
