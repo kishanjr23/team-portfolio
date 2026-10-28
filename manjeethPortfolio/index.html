@@ -1,0 +1,240 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">  <link rel="stylesheet" href="style.css">
+</head><body>
+<title>Manjeeth S Padhmashali</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Manjeeth S Padhmashali, full-stack and embedded developer, B.E. Computer Science at R V College of Engineering, Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+
+
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="cursor-glow" id="cglow" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="#top" aria-label="Back to top"><span class="mark-dot" aria-hidden="true"></span><b style="font-weight:inherit">Manjeeth<i style="font-style:normal;color:var(--spark)">.</i></b></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="kbd-btn" id="cmdBtn" type="button" aria-label="Open command menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Jump to</span><kbd>/</kbd></button>
+      <button class="kbd-btn warp-btn" id="warpBtn" type="button" aria-label="Engage warp drive"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg><span>Warp</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="status"><span class="pulse" aria-hidden="true"></span>Open to internships &amp; collaborations</span>
+        <p class="hello">Hello, Earthling. I'm</p>
+        <h1 class="name" id="name" aria-label="Manjeeth S Padhmashali"><span class="line" aria-hidden="true">Manjeeth <span class="s-wrap">S</span></span><span class="line" aria-hidden="true">Padhmashali</span></h1>
+        <p class="role">Full-stack &amp; embedded developer. I build <span class="rotor-wrap"><span class="rotor" id="rotor">ESP32 firmware</span><span class="caret" aria-hidden="true"></span></span></p>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>B.E. Computer Science · 2nd year</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>R V College of Engineering</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Bengaluru, India</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary magnet" href="#work">See my work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn magnet" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div>
+        <div class="orbit" aria-label="Tools I work with">
+          <div class="ring r3" style="--t:60s">
+            <div class="sat" style="--a:20deg"><span><b>Firebase</b></span></div>
+            <div class="sat" style="--a:140deg"><span><b>HTML / CSS</b></span></div>
+            <div class="sat" style="--a:260deg"><span><b class="hot">CubeSat</b></span></div>
+          </div>
+          <div class="ring r2" style="--t:40s">
+            <div class="sat" style="--a:80deg"><span><b>PyTorch</b></span></div>
+            <div class="sat" style="--a:230deg"><span><b class="hot">ESP32</b></span></div>
+          </div>
+          <div class="ring r1" style="--t:26s">
+            <div class="sat" style="--a:0deg"><span><b>C</b></span></div>
+            <div class="sat" style="--a:180deg"><span><b>Python</b></span></div>
+            <div class="sat" style="--a:95deg"><span><b class="craft" aria-label="Satellite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="9" width="6" height="6" rx="1" transform="rotate(45 12 12)"/><path d="m4 10 4-4 3 3-4 4zM13 17l4-4 3 3-4 4zM16 8l2-2"/></svg></b></span></div>
+          </div>
+          <div class="planet"><div><strong>MSP</strong><small>RVCE · CSE</small></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>9.68</b><span>CGPA at RVCE</span></div>
+      <div class="stat" role="listitem"><b>9<em>+</em></b><span>projects launched</span></div>
+      <div class="stat" role="listitem"><b>90.4<em>%</em></b><span>accuracy, galaxy CNN</span></div>
+      <div class="stat" role="listitem"><b>11<em>+</em></b><span>teammates on a CubeSat payload</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Mission brief</span><h2>About <span class="serif">me</span></h2></div>
+      <p>A maker who likes to see things run, from the first sensor reading to the last pixel on the dashboard.</p>
+    </div>
+    <div class="bento">
+      <div class="glass spot tile t-lede">
+        <span class="eyebrow">Crew profile</span>
+        <p class="lede">I'm Manjeeth, a full-stack and embedded developer in Bengaluru. I help teams turn <span class="serif">a sensor reading</span> into a screen someone can use.</p>
+        <p class="body">I work across the whole stack: firmware on an ESP32, data moving through Firebase, a model trained in PyTorch, and the web interface people actually touch. Student teams, labs and early-stage ideas get one person who can connect all of it, and who writes it down so the next person can pick it up.</p>
+      </div>
+      <div class="glass spot tile t-place">
+        <span class="place-map" aria-hidden="true"></span>
+        <h3>Based in</h3>
+        <p class="place-name">Bengaluru, India</p>
+        <div class="place-time" id="clock">--:--</div>
+        <p class="place-sub">Local time, IST (UTC+5:30)</p>
+      </div>
+      <div class="glass spot tile t-fact">
+        <div class="fact-top"><h3>Field notes</h3><span class="eyebrow" id="factN">1/6</span></div>
+        <p id="factText">I learned the hard way that an ESP32 only speaks 2.4 GHz Wi-Fi. My 5 GHz phone hotspot was the bug.</p>
+        <button class="link-btn" id="factBtn" type="button">Another one →</button>
+      </div>
+      <div class="glass spot tile t-proof">
+        <h3>Proof so far</h3>
+        <ul class="proof-list">
+          <li><b>9.68</b><span>CGPA in B.E. Computer Science at R V College of Engineering</span></li>
+          <li><b>90.4%</b><span>validation accuracy on a galaxy CNN I designed and trained from scratch</span></li>
+          <li><b>2,000</b><span>articles classified by a Naive Bayes model and HTTP server I wrote in pure C</span></li>
+          <li><b>11+</b><span>teammates on the IMEx CubeSat biological payload</span></li>
+        </ul>
+      </div>
+      <div class="glass spot tile t-why">
+        <h3>Why I build</h3>
+        <p class="quote">A number on a dashboard means more when I wired the sensor behind it.</p>
+        <p class="dim" style="margin-top:14px">So I test on real hardware early, keep the whole pipeline in my head, and document as I go.</p>
+      </div>
+      <div class="glass spot tile t-off">
+        <h3>Off the clock</h3>
+        <p>I'm usually somewhere near space tech. I'm part of <b>Team Antariksh</b>, RVCE's student space team, and a galaxy classifier is still my favourite side project.</p>
+      </div>
+      <div class="glass spot tile t-now">
+        <h3>Currently building</h3>
+        <p class="dim">Click one for the details.</p>
+        <div class="now-list" id="nowList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="work" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Payloads</span><h2>Selected <span class="serif">work</span></h2></div>
+      <p>Hardware, models and interfaces. Open any card for the full story: the problem, what I built, and how it turned out.</p>
+    </div>
+    <div class="glass path">
+      <div class="path-label">
+        <span class="eyebrow">How I build · sensor to screen</span>
+        <p>Tap a layer to light up the projects that live there.</p>
+      </div>
+      <div class="track-scroll"><div class="track" id="track"><span class="packet" aria-hidden="true"></span></div></div>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="filter-note" id="note" aria-live="polite"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Instruments on board</span><h2>Skills &amp; <span class="serif">tools</span></h2></div>
+      <p>Click any skill to see where I've used it. The numbers count real projects, not tutorials.</p>
+    </div>
+    <div class="skill-grid" id="skillGrid"></div>
+  </div>
+</section>
+
+<section class="block" id="journey">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Flight path</span><h2>The <span class="serif">journey</span></h2></div>
+      <p>Two years in, and the projects keep getting closer to the real world.</p>
+    </div>
+    <ol class="timeline">
+      <li class="tl"><time>2025</time><div class="glass"><h3>Joined R V College of Engineering</h3><p>Started B.E. in Computer Science. Built a Multinomial Naive Bayes fake-news detector in pure C99, trained on 2,000 Indian news articles, with its own HTTP server.</p></div></li>
+      <li class="tl"><time>IDEA Lab</time><div class="glass"><h3>First hardware-to-cloud build</h3><p>An ESP32 drain health monitor streaming sensor data through Firebase to a Streamlit dashboard. Debugged Wi-Fi bands, TLS and tokens along the way.</p></div></li>
+      <li class="tl"><time>2026</time><div class="glass"><h3>Deep learning and space tech</h3><p>Trained a galaxy morphology CNN to 90.4% accuracy on an Apple M4. Joined the IMEx CubeSat payload team and Team Antariksh's sponsorship subsystem.</p></div></li>
+      <li class="tl now"><time>Now</time><div class="glass"><h3>Second year, CGPA 9.68</h3><p>Building an AI groundwater digital twin, the graph core of a disaster road-network analyzer, SpendShare, and InsightEd. Sharpening web development with HTML, CSS and JavaScript, starting with this site.</p></div></li>
+      <li class="tl next"><time>Next</time><div class="glass"><h3>An internship where I ship something real</h3><p>Ideally work that crosses hardware, data and the web, with a team that cares about getting things right.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="glass contact">
+      <div>
+        <span class="status"><span class="pulse" aria-hidden="true"></span>Ground control · open for internships, research &amp; collabs</span>
+        <h2>Let's build something <span class="serif">that runs.</span></h2>
+        <p class="sub">I reply within a day or two. Email is fastest, and my code lives on GitHub.</p>
+        <div class="email-row">
+          <code id="email">manjeethpadhmashali@gmail.com</code>
+          <button class="btn primary sm" id="copyEmail" type="button">Copy email</button>
+        </div>
+        <div class="social">
+          <a class="btn magnet" id="lnLinkedin" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg>LinkedIn</a>
+          <a class="btn magnet" id="lnGithub" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+          <a class="btn magnet" id="lnResume" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Resume</a>
+        </div>
+      </div>
+      <form class="composer" id="composer" novalidate>
+        <label>Draft me a message</label>
+        <div class="topics" role="group" aria-label="What is it about">
+          <button type="button" class="topic" aria-pressed="true" data-t="internship">Internship</button>
+          <button type="button" class="topic" aria-pressed="false" data-t="collab">Project collab</button>
+          <button type="button" class="topic" aria-pressed="false" data-t="research">Research</button>
+          <button type="button" class="topic" aria-pressed="false" data-t="hi">Just saying hi</button>
+        </div>
+        <label for="cName">Your name</label>
+        <input id="cName" type="text" placeholder="Priya from Acme Robotics" autocomplete="name">
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" rows="5"></textarea>
+        <div class="row">
+          <button class="btn primary sm" type="submit">Copy message</button>
+          <a class="btn sm" id="mailLink" href="#">Open in mail app</a>
+        </div>
+        <p class="hint">Copies the subject and text with my address, ready to paste into any email.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Manjeeth S Padhmashali · Hand-written in HTML, CSS &amp; JavaScript · Transmission ends.</span>
+    <span>Press <kbd>/</kbd> to jump anywhere, <kbd>W</kbd> to warp. Type <kbd>hire</kbd> for a surprise.</span>
+  </div>
+</footer>
+
+<dialog id="proj" aria-labelledby="dTitle"><div id="dBody"></div></dialog>
+
+<dialog id="palette" aria-label="Command menu">
+  <div class="p-search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="pInput" type="text" placeholder="Jump to a section, project or action…" autocomplete="off" aria-label="Search commands">
+    <kbd>esc</kbd>
+  </div>
+  <ul class="p-list" id="pList" role="listbox"></ul>
+  <div class="p-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>enter</kbd> open</span><span><kbd>/</kbd> or <kbd>ctrl K</kbd> anywhere</span></div>
+</dialog>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js" defer></script>
+
+</body></html>
