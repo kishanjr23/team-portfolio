@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kishan J R — Computer Science Engineering Student, Developer, and Problem Solver. Explore my projects, skills, and journey." />
+  <meta name="keywords" content="Kishan JR, portfolio, CSE student, developer, web development, DSA, Java, Python" />
+  <meta name="author" content="Kishan J R" />
+  <meta property="og:title" content="Kishan J R — Portfolio" />
+  <meta property="og:description" content="Building Ideas Into Digital Experiences." />
+  <meta property="og:type" content="website" />
+  <title>Kishan J R — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── Page Loader ─── -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">KJR</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ─── Custom Cursor ─── -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ─── Navigation ─── -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Kishan J R – home">
+        <span class="logo-text">KJR</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"       class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#hero"       class="mobile-nav-link">Home</a></li>
+        <li><a href="#about"      class="mobile-nav-link">About</a></li>
+        <li><a href="#skills"     class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects"   class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#contact"    class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ─── HERO ─── -->
+    <section id="hero" aria-label="Hero section">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+      <!-- Ambient gradient orbs -->
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+
+      <!-- Grid overlay -->
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge" aria-hidden="true">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-line reveal-text">Kishan</span>
+          <span class="name-line reveal-text">J R</span>
+        </h1>
+
+        <h2 class="hero-heading reveal-text">
+          Building Ideas Into<br />
+          <span class="gradient-text">Digital Experiences.</span>
+        </h2>
+
+        <p class="hero-subtitle reveal-text">
+          <span class="typewriter-prefix">Computer Science Student &amp; </span>
+          <span id="typewriter-target" class="typewriter-highlight"></span>
+          <span class="typewriter-cursor">|</span>
+        </p>
+
+        <p class="hero-desc reveal-text">
+          Passionate about crafting meaningful software — from elegant algorithms to
+          immersive web experiences. I love turning complex problems into simple,
+          beautiful solutions.
+        </p>
+
+        <div class="hero-cta reveal-text">
+          <a href="#projects" class="btn btn-primary magnetic-btn" aria-label="Explore my projects">
+            <span>Explore My Work</span>
+            <i class="fa-solid fa-arrow-right btn-icon" aria-hidden="true"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline magnetic-btn" aria-label="Contact me">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="hero-socials reveal-text" aria-label="Social media links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub (placeholder link)">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn (placeholder link)">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram (placeholder link)">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating code snippets decoration -->
+      <div class="hero-deco" aria-hidden="true">
+        <div class="code-card code-card-1">
+          <span class="code-keyword">const</span>
+          <span class="code-var"> passion</span>
+          <span class="code-op"> = </span>
+          <span class="code-string">"coding"</span><span>;</span>
+        </div>
+        <div class="code-card code-card-2">
+          <span class="code-keyword">while</span>
+          <span>(learning) </span>
+          <span class="code-keyword">grow</span><span>();</span>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section id="about" aria-label="About me">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A curious mind exploring the intersection of code and creativity</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile visual -->
+          <div class="about-visual">
+            <div class="profile-frame">
+              <div class="profile-img-wrapper">
+                <!-- Replace src with your actual photo -->
+                <img
+                  src="assets/images/profile-placeholder.svg"
+                  alt="Kishan J R profile photo"
+                  class="profile-img"
+                  id="profile-img"
+                  onerror="this.src='assets/images/profile-fallback.svg'"
+                />
+              </div>
+              <div class="profile-glow" aria-hidden="true"></div>
+              <div class="profile-ring" aria-hidden="true"></div>
+              <div class="profile-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="about-stats" aria-label="Achievement statistics">
+              <div class="stat-card">
+                <span class="stat-number" data-target="[YEAR]">—</span>
+                <span class="stat-label">Enrolled Since</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number counter" data-target="4">0</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number counter" data-target="7">0</span>
+                <span class="stat-label">Tech Skills</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- About text -->
+          <div class="about-text">
+            <div class="about-intro">
+              <p class="about-paragraph">
+                Hi! I'm <strong>Kishan J R</strong>, a Computer Science Engineering student
+                driven by a deep passion for technology and problem-solving. I believe that
+                great software is built at the intersection of logical thinking and creative vision.
+              </p>
+              <p class="about-paragraph">
+                My journey in tech spans <strong>web development</strong>, <strong>data structures &amp; algorithms</strong>,
+                and the exciting world of <strong>AI &amp; machine learning</strong>. I enjoy
+                dissecting complex challenges and crafting clean, efficient solutions.
+              </p>
+              <p class="about-paragraph">
+                When I'm not coding, you'll find me exploring new technologies, contributing
+                to personal projects, or diving deep into how intelligent systems think and learn.
+              </p>
+            </div>
+
+            <div class="about-interests" aria-label="Interests">
+              <h3 class="interests-title">What I'm into</h3>
+              <div class="interest-tags">
+                <span class="interest-tag"><i class="fa-solid fa-code" aria-hidden="true"></i> Programming</span>
+                <span class="interest-tag"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Data Structures</span>
+                <span class="interest-tag"><i class="fa-solid fa-globe" aria-hidden="true"></i> Web Dev</span>
+                <span class="interest-tag"><i class="fa-solid fa-brain" aria-hidden="true"></i> AI &amp; ML</span>
+                <span class="interest-tag"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Embedded Systems</span>
+                <span class="interest-tag"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Problem Solving</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Let's Connect</span>
+                <i class="fa-solid fa-arrow-right btn-icon" aria-hidden="true"></i>
+              </a>
+              <!-- Replace href with actual CV link when available -->
+              <a href="#" class="btn btn-ghost" aria-label="Download CV (link coming soon)">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section id="skills" aria-label="Skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">A growing toolkit built through projects, coursework, and curiosity</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category" data-category="programming">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+              </div>
+              <h3 class="skill-cat-title">Programming</h3>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-tag">
+                <i class="fa-solid fa-c" aria-hidden="true"></i>
+                <span>C</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon-text" aria-hidden="true">{ }</span>
+                <span>C++</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-python" aria-hidden="true"></i>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-category" data-category="web">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              </div>
+              <h3 class="skill-cat-title">Web Development</h3>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-tag">
+                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Computer Science -->
+          <div class="skill-category" data-category="cs">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              </div>
+              <h3 class="skill-cat-title">Computer Science</h3>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-tag">
+                <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                <span>DSA</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-solid fa-object-group" aria-hidden="true"></i>
+                <span>OOP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category" data-category="tools">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-wrench" aria-hidden="true"></i>
+              </div>
+              <h3 class="skill-cat-title">Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-tag">
+                <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <span>VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects" aria-label="Projects">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A collection of work that represents my growth as a developer</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Food Grading System -->
+          <article class="project-card" data-project="food-grading" tabindex="0" role="article" aria-label="Food Grading System project">
+            <div class="project-card-inner">
+              <div class="project-img-wrapper">
+                <div class="project-img project-img-1" aria-hidden="true">
+                  <div class="project-img-overlay"></div>
+                  <div class="project-img-icon">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="project-number" aria-hidden="true">01</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Food Grading System</h3>
+                <p class="project-desc">
+                  Evaluates packaged food items using nutritional data and ingredient analysis.
+                  Grades the food, explains the factors behind the rating, and suggests
+                  healthier alternatives to help consumers make informed choices.
+                </p>
+                <div class="project-tags" aria-label="Technologies used">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Data Analysis</span>
+                  <span class="project-tag">AI/ML</span>
+                </div>
+                <div class="project-links">
+                  <!-- Replace # with actual project URL -->
+                  <a href="#" class="project-link project-link-demo placeholder-link" aria-label="View Food Grading System project (link coming soon)">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>View Project</span>
+                  </a>
+                  <!-- Replace # with actual GitHub repository URL -->
+                  <a href="#" class="project-link project-link-code placeholder-link" aria-label="Source code for Food Grading System (link coming soon)">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="project-detail-btn" data-modal="food-grading" aria-label="View more details about Food Grading System">
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <!-- Project 2: DSA Visualizer -->
+          <article class="project-card" data-project="dsa-visualizer" tabindex="0" role="article" aria-label="DSA Visualizer project">
+            <div class="project-card-inner">
+              <div class="project-img-wrapper">
+                <div class="project-img project-img-2" aria-hidden="true">
+                  <div class="project-img-overlay"></div>
+                  <div class="project-img-icon">
+                    <i class="fa-solid fa-chart-bar" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="project-number" aria-hidden="true">02</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">DSA Visualizer</h3>
+                <p class="project-desc">
+                  A Java-based interactive application that visually demonstrates data structures
+                  and algorithms in real time — making abstract concepts tangible and easier
+                  to understand for students.
+                </p>
+                <div class="project-tags" aria-label="Technologies used">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">Swing/JavaFX</span>
+                  <span class="project-tag">DSA</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link project-link-demo placeholder-link" aria-label="View DSA Visualizer project (link coming soon)">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>View Project</span>
+                  </a>
+                  <a href="#" class="project-link project-link-code placeholder-link" aria-label="Source code for DSA Visualizer (link coming soon)">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="project-detail-btn" data-modal="dsa-visualizer" aria-label="View more details about DSA Visualizer">
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <!-- Project 3: Driver Drowsiness Detection -->
+          <article class="project-card" data-project="drowsiness" tabindex="0" role="article" aria-label="Driver Drowsiness and Alcohol Detection project">
+            <div class="project-card-inner">
+              <div class="project-img-wrapper">
+                <div class="project-img project-img-3" aria-hidden="true">
+                  <div class="project-img-overlay"></div>
+                  <div class="project-img-icon">
+                    <i class="fa-solid fa-car" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="project-number" aria-hidden="true">03</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Driver Drowsiness &amp; Alcohol Detection</h3>
+                <p class="project-desc">
+                  An Arduino-based safety prototype that detects driver drowsiness and
+                  alcohol levels before or during driving, triggering alerts to prevent
+                  road accidents.
+                </p>
+                <div class="project-tags" aria-label="Technologies used">
+                  <span class="project-tag">Arduino</span>
+                  <span class="project-tag">Embedded C</span>
+                  <span class="project-tag">IoT</span>
+                  <span class="project-tag">Sensors</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link project-link-demo placeholder-link" aria-label="View Driver Drowsiness Detection project (link coming soon)">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>View Project</span>
+                  </a>
+                  <a href="#" class="project-link project-link-code placeholder-link" aria-label="Source code for Driver Drowsiness Detection (link coming soon)">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="project-detail-btn" data-modal="drowsiness" aria-label="View more details about Driver Drowsiness Detection">
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <!-- Project 4: Socratic Tutor -->
+          <article class="project-card" data-project="socratic-tutor" tabindex="0" role="article" aria-label="Socratic Tutor project">
+            <div class="project-card-inner">
+              <div class="project-img-wrapper">
+                <div class="project-img project-img-4" aria-hidden="true">
+                  <div class="project-img-overlay"></div>
+                  <div class="project-img-icon">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="project-number" aria-hidden="true">04</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Socratic Tutor</h3>
+                <p class="project-desc">
+                  An AI-assisted educational platform that guides students through problems
+                  using the Socratic method — asking reasoning-oriented questions to develop
+                  critical thinking instead of providing direct answers.
+                </p>
+                <div class="project-tags" aria-label="Technologies used">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">AI/LLM</span>
+                  <span class="project-tag">NLP</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link project-link-demo placeholder-link" aria-label="View Socratic Tutor project (link coming soon)">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>View Project</span>
+                  </a>
+                  <a href="#" class="project-link project-link-code placeholder-link" aria-label="Source code for Socratic Tutor (link coming soon)">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="project-detail-btn" data-modal="socratic-tutor" aria-label="View more details about Socratic Tutor">
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </button>
+          </article>
+
+        </div><!-- /projects-grid -->
+      </div>
+    </section>
+
+    <!-- ─── PROJECT MODALS ─── -->
+    <!-- Food Grading Modal -->
+    <div class="modal-overlay" id="modal-food-grading" role="dialog" aria-modal="true" aria-label="Food Grading System details" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="modal-header project-img-1">
+          <div class="modal-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title">Food Grading System</h3>
+          <div class="modal-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Data Analysis</span>
+            <span class="project-tag">AI/ML</span>
+          </div>
+          <p>This system analyses packaged food products by parsing their nutritional information and ingredient lists. It assigns a health grade based on multiple factors such as sugar content, saturated fats, additives, and overall calorie density.</p>
+          <p>The system also explains <em>why</em> a product received its grade and proactively suggests comparable but healthier alternatives — empowering consumers to make better dietary decisions.</p>
+          <div class="modal-links">
+            <a href="#" class="btn btn-primary placeholder-link">View Project</a>
+            <a href="#" class="btn btn-outline placeholder-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+          </div>
+          <p class="placeholder-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Links are placeholders — update with actual URLs when available.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DSA Visualizer Modal -->
+    <div class="modal-overlay" id="modal-dsa-visualizer" role="dialog" aria-modal="true" aria-label="DSA Visualizer details" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="modal-header project-img-2">
+          <div class="modal-icon"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i></div>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title">DSA Visualizer</h3>
+          <div class="modal-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Swing/JavaFX</span>
+            <span class="project-tag">DSA</span>
+          </div>
+          <p>A Java desktop application that brings data structures and algorithms to life through interactive visualizations. Users can step through sorting algorithms, observe tree traversals, and explore graph searches in real time.</p>
+          <p>Designed to help fellow students develop intuition for algorithms — making abstract concepts concrete and visually engaging.</p>
+          <div class="modal-links">
+            <a href="#" class="btn btn-primary placeholder-link">View Project</a>
+            <a href="#" class="btn btn-outline placeholder-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+          </div>
+          <p class="placeholder-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Links are placeholders — update with actual URLs when available.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drowsiness Modal -->
+    <div class="modal-overlay" id="modal-drowsiness" role="dialog" aria-modal="true" aria-label="Driver Drowsiness Detection details" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="modal-header project-img-3">
+          <div class="modal-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title">Driver Drowsiness &amp; Alcohol Detection</h3>
+          <div class="modal-tags">
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">Embedded C</span>
+            <span class="project-tag">IoT</span>
+            <span class="project-tag">Sensors</span>
+          </div>
+          <p>An Arduino-based hardware prototype that integrates eye-blink sensors and an alcohol/gas sensor module to monitor driver state. When drowsiness or alcohol is detected, the system triggers audible and visual alerts.</p>
+          <p>This project demonstrates real-world applications of embedded systems in road safety — a practical approach to reducing accidents caused by impaired driving.</p>
+          <div class="modal-links">
+            <a href="#" class="btn btn-primary placeholder-link">View Project</a>
+            <a href="#" class="btn btn-outline placeholder-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+          </div>
+          <p class="placeholder-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Links are placeholders — update with actual URLs when available.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socratic Tutor Modal -->
+    <div class="modal-overlay" id="modal-socratic-tutor" role="dialog" aria-modal="true" aria-label="Socratic Tutor details" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="modal-header project-img-4">
+          <div class="modal-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title">Socratic Tutor</h3>
+          <div class="modal-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">AI/LLM</span>
+            <span class="project-tag">NLP</span>
+          </div>
+          <p>An AI-powered tutoring system inspired by the Socratic method of teaching. Rather than providing direct answers, the tutor guides students through questions that develop reasoning and critical thinking skills.</p>
+          <p>Built to bridge the gap between AI capabilities and effective pedagogy — helping students learn <em>how</em> to think through problems, not just memorise solutions.</p>
+          <div class="modal-links">
+            <a href="#" class="btn btn-primary placeholder-link">View Project</a>
+            <a href="#" class="btn btn-outline placeholder-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a>
+          </div>
+          <p class="placeholder-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Links are placeholders — update with actual URLs when available.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── EXPERIENCE / TIMELINE ─── -->
+    <section id="experience" aria-label="Experience and education">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">The milestones that have shaped my development as a technologist</p>
+        </div>
+
+        <div class="timeline" role="list" aria-label="Timeline of experience and education">
+
+          <!-- Education entry — fill in actual details -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <span class="timeline-badge timeline-badge-education">Education</span>
+                <span class="timeline-date">2025 — Present</span>
+              </div>
+              <h3 class="timeline-title">Bachelor of Engineering — Computer Science</h3>
+              <p class="timeline-org">R V College of Engineering</p>
+              <p class="timeline-desc">
+                Pursuing a B.E. in Computer Science Engineering with a focus on algorithms,
+                software development, and emerging technologies. Active participant in
+                technical events and project work.
+              </p>
+              
+            </div>
+          </div>
+
+          <!-- Certification placeholder — fill in or remove -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <span class="timeline-badge timeline-badge-cert">Certification</span>
+                <span class="timeline-date">2025-2029</span>
+              </div>
+              <h3 class="timeline-title">Upgrading skills</h3>
+              
+             
+            </div>
+          </div>
+
+          <!-- Project achievement placeholder -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <span class="timeline-badge timeline-badge-achievement">Achievement</span>
+                <span class="timeline-date">2025-present</span>
+              </div>
+              <h3 class="timeline-title">Participating in hackathons,events</h3>
+              
+              
+            </div>
+          </div>
+
+          <!-- Internship / experience placeholder -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <span class="timeline-badge timeline-badge-work">Experience</span>
+                <span class="timeline-date">[MONTH YEAR] — [MONTH YEAR]</span>
+              </div>
+              <h3 class="timeline-title">[Role / Internship Title]</h3>
+              <p class="timeline-org">[Company / Organisation]</p>
+              <p class="timeline-desc">
+                [Describe responsibilities and what you built or learned. Replace this placeholder with actual work experience when available.]
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+
+        <p class="timeline-placeholder-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          Timeline entries marked with <strong>[brackets]</strong> are placeholders — update them with your real information.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" aria-label="Contact">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Have an idea?<br /><span class="gradient-text">Let's build something.</span></h2>
+          <p class="section-subtitle">Whether it's a project, collaboration, or just a hello — my inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon-wrap">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <!-- Replace with actual email address -->
+                <a href="kishanjr.cs25@rvce.edu.in" class="contact-value placeholder-link">kishanjr.cs25@rvce.edu.in</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-wrap">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-label">GitHub</p>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-value placeholder-link">github.com/your-username</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-wrap">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-label">LinkedIn</p>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-value placeholder-link">linkedin.com/in/your-profile</a>
+              </div>
+            </div>
+
+            <div class="contact-availability">
+              <span class="avail-dot"></span>
+              <span>Currently open to opportunities and collaborations</span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+            <div class="form-notice" role="note">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              <span>This form needs a backend service (e.g., <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a>) to send emails. Connect one before going live.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Name <span class="form-required" aria-label="required">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" aria-required="true" />
+              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email <span class="form-required" aria-label="required">*</span></label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+              <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message <span class="form-required" aria-label="required">*</span></label>
+              <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Tell me about your idea or project..." rows="5" required aria-required="true"></textarea>
+              <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit magnetic-btn" id="submit-btn">
+              <span class="submit-text">Send Message</span>
+              <i class="fa-solid fa-paper-plane btn-icon" aria-hidden="true"></i>
+            </button>
+
+            <!-- Form feedback messages -->
+            <div class="form-feedback form-success" id="form-success" role="status" aria-live="polite" aria-hidden="true">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <strong>Message sent!</strong> I'll get back to you soon.
+            </div>
+            <div class="form-feedback form-error-msg" id="form-error-msg" role="alert" aria-live="assertive" aria-hidden="true">
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+              <strong>Something went wrong.</strong> Please try again or email me directly.
+            </div>
+          </form>
+        </div><!-- /contact-grid -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Back to top — Kishan J R">KJR<span class="logo-dot">.</span></a>
+          <p class="footer-tagline">Building Ideas Into Digital Experiences.</p>
+        </div>
+
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="https://github.com/kishanjr23/demo" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub (placeholder)">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kishan-j-r-46b77838a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn (placeholder)">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram (placeholder)">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> Kishan J R. Crafted with
+          <i class="fa-solid fa-heart footer-heart" aria-label="love" aria-hidden="true"></i>
+          and a lot of coffee.
+        </p>
+        <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main script (loaded after DOM) -->
+  <script src="script.js"></script>
+</body>
+</html>

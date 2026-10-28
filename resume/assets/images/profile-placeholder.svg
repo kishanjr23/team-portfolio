@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0b1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <clipPath id="round-clip">
+      <rect width="280" height="280" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="280" fill="url(#bg-grad)" rx="20"/>
+
+  <!-- Accent ring -->
+  <circle cx="140" cy="140" r="130" fill="none" stroke="url(#accent-grad)" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Body silhouette -->
+  <ellipse cx="140" cy="230" rx="78" ry="54" fill="url(#accent-grad)" opacity="0.15"/>
+
+  <!-- Head silhouette -->
+  <circle cx="140" cy="106" r="50" fill="url(#accent-grad)" opacity="0.25"/>
+
+  <!-- Inner highlight on head -->
+  <circle cx="127" cy="95" r="10" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Initials text -->
+  <text
+    x="140" y="118"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Space Grotesk, Inter, sans-serif"
+    font-size="32"
+    font-weight="800"
+    letter-spacing="-1"
+    fill="rgba(255,255,255,0.75)"
+  >KJR</text>
+
+  <!-- "Replace me" caption -->
+  <rect x="40" y="238" width="200" height="28" rx="8" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text
+    x="140" y="256"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="JetBrains Mono, monospace"
+    font-size="9"
+    fill="rgba(139,92,246,0.8)"
+    letter-spacing="0.05em"
+  >Replace with your photo</text>
+</svg>
